@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 
@@ -40,11 +41,13 @@ const LineChartComponent: React.FC = () => {
         // Оси X и Y
         const xScale = d3
             .scaleLinear()
+            // @ts-ignore
             .domain(d3.extent(data, (d) => d.year))
             .range([0, width]);
 
         const yScale = d3
             .scaleLinear()
+            // @ts-ignore
             .domain([0, d3.max(data, (d) => Math.max(d.account1, d.account2, d.account3, d.account4, d.account5))])
             .range([height, 0]);
 
