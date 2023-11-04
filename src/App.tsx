@@ -13,7 +13,7 @@ export default function App() {
         setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/syngrisi-demo-app/">
             <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
                 <ThemeProvider colorScheme={colorScheme}>
                     <Routes>
