@@ -6,7 +6,7 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "VITE_BASE_PATH=/  vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
@@ -25,6 +25,7 @@
     "antd": "^5.3.0",
     "d3": "^7.8.2",
     "react": "^18.2.0",
+    "react-d3-library": "^1.1.8",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.2"
   },

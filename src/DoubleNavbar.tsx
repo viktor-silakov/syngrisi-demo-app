@@ -9,6 +9,7 @@ import {
     IconUser,
     IconSettings,
 } from '@tabler/icons-react';
+import { useNavigate } from 'react-router-dom';
 import Logo from './img/demoLogo.png';
 
 const useStyles = createStyles((theme) => ({
@@ -132,12 +133,15 @@ const linksMockdata = [
     'Pull Requests',
     'Open Issues',
     'Wiki pages',
+    'About',
 ];
 
 export function DoubleNavbar() {
     const { classes, cx } = useStyles();
     const [active, setActive] = useState('Releases');
     const [activeLink, setActiveLink] = useState('Charts');
+    let navigate = useNavigate();
+
 
     const mainLinks = mainLinksMockdata.map((link) => (
         <Tooltip
@@ -162,6 +166,7 @@ export function DoubleNavbar() {
           href="/"
           onClick={(event) => {
                 event.preventDefault();
+                navigate(link)
                 setActiveLink(link);
             }}
           key={link}

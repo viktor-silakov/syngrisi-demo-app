@@ -13,13 +13,13 @@ export default function App() {
         setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
 
     return (
-        <BrowserRouter basename="/syngrisi-demo-app/">
+        <BrowserRouter basename={import.meta.env.VITE_BASE_PATH || "/syngrisi-demo-app/"}>
             <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
                 <ThemeProvider colorScheme={colorScheme}>
                     <Routes>
                         <Route path="/" element={<Layout />} />
-                        <Route path="/lorem" element={<Lorem />} />
-                        <Route path="/progress" element={<ProgressBar />} />
+                        <Route path="/About" element={<Lorem />} />
+                        <Route path="/Clients" element={<ProgressBar />} />
                     </Routes>
                     {/*<Layout />*/}
                 </ThemeProvider>
