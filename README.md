@@ -1,3 +1,3 @@
-# Demo app for Syngrisi
+# Demo web app for Syngrisi
 
-Simple webapp for Syngrisi demo.
+SUT web application to demonstrate the capabilities of the Syngrisi. For more details see the Syngrisi boilerplate's tests.
