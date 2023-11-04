@@ -160,7 +160,7 @@ export function FooterLinks() {
     });
 
     return (
-        <footer className={classes.footer} id="footer">
+        <footer className={classes.footer}>
             <Container className={classes.inner}>
                 <div className={classes.logo}>
                     <Group>
