@@ -7,7 +7,7 @@ export function Lorem() {
     const searchParams = new URLSearchParams(document.location.search);
     const broken = searchParams.get('version');
     return (
-        <Paper>
+        <Paper p="md">
             <Title order={1}>Lorem ipsum</Title>
             <Text size="xl">
                 <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias autem cumque doloremque doloribus
@@ -51,7 +51,7 @@ export function Lorem() {
                     reprehenderit sint. Consequatur cumque, qui.
                 </div>
             </Text>
-            <Image src={img} width="500" />
+            <Image src={img} m="auto" width="500" />
             <Text size="xl">
                 <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias autem cumque doloremque doloribus
                     eaque fugit illum incidunt, minus, perferendis porro, provident sint suscipit tempore vel velit
