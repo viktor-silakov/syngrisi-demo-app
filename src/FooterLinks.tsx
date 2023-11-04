@@ -172,7 +172,7 @@ export function FooterLinks() {
                 </div>
                 <div className={classes.groups}>{groups}</div>
             </Container>
-            <Container className={classes.afterFooter}>
+            <Container id="footer" className={classes.afterFooter}>
                 <Text color="dimmed" size="sm">
                     © 2023 Syngrisi demo. All rights reserved.{broken === '2' ? '.' : ''}
                 </Text>
