@@ -122,19 +122,34 @@ const mainLinksMockdata = [
 ];
 
 const linksMockdata = [
-    'Security',
-    'Charts',
-    'Dashboard',
-    'Releases',
-    'Account',
-    'Orders',
-    'Clients',
-    'Databases',
-    'Pull Requests',
-    'Open Issues',
-    'Wiki pages',
-    'About',
+    { name: 'Security', link: 'Security' },
+    { name: 'Charts', link: 'Charts' },
+    { name: 'Dashboard', link: 'Dashboard' },
+    { name: 'Releases', link: 'Releases' },
+    { name: 'Account', link: 'Account' },
+    { name: 'Orders', link: 'Orders' },
+    { name: 'Clients', link: 'Clients' },
+    { name: 'Databases', link: 'Databases' },
+    { name: 'Pull Requests', link: 'Pull Requests' },
+    { name: 'Open Issues', link: 'Open Issues' },
+    { name: 'Wiki pages', link: 'Wiki pages' },
+    { name: 'About', link: 'About?version=0' },
+    { name: 'About (Bug)', link: 'About?version=4' }
 ];
+// const linksMockdata = [
+//     'Security',
+//     'Charts',
+//     'Dashboard',
+//     'Releases',
+//     'Account',
+//     'Orders',
+//     'Clients',
+//     'Databases',
+//     'Pull Requests',
+//     'Open Issues',
+//     'Wiki pages',
+//     'About',
+// ];
 
 export function DoubleNavbar() {
     const { classes, cx } = useStyles();
@@ -145,33 +160,33 @@ export function DoubleNavbar() {
 
     const mainLinks = mainLinksMockdata.map((link) => (
         <Tooltip
-          label={link.label}
-          position="right"
-          withArrow
-          transitionProps={{ duration: 0 }}
-          key={link.label}
+            label={link.label}
+            position="right"
+            withArrow
+            transitionProps={{ duration: 0 }}
+            key={link.label}
         >
             <UnstyledButton
-              onClick={() => setActive(link.label)}
-              className={cx(classes.mainLink, { [classes.mainLinkActive]: link.label === active })}
+                onClick={() => setActive(link.label)}
+                className={cx(classes.mainLink, { [classes.mainLinkActive]: link.label === active })}
             >
                 <link.icon size="1.4rem" stroke={1.5} />
             </UnstyledButton>
         </Tooltip>
     ));
 
-    const links = linksMockdata.map((link) => (
+    const links = linksMockdata.map((item) => (
         <a
-          className={cx(classes.link, { [classes.linkActive]: activeLink === link })}
-          href="/"
-          onClick={(event) => {
+            className={cx(classes.link, { [classes.linkActive]: activeLink === item.name })}
+            href="/"
+            onClick={(event) => {
                 event.preventDefault();
-                navigate(link)
-                setActiveLink(link);
+                navigate(item.link)
+                setActiveLink(item.name);
             }}
-          key={link}
+            key={item.name}
         >
-            {link}
+            {item.name}
         </a>
     ));
 
