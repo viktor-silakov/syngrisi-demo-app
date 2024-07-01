@@ -13,7 +13,7 @@ import {
 import { useDisclosure } from '@mantine/hooks';
 import { IconMoonStars, IconSearch, IconSun } from '@tabler/icons-react';
 import * as React from 'react';
-import Logo from './img/demoLogo.png';
+import Logo from './img/logo.svg';
 
 const useStyles = createStyles((theme) => ({
     header: {
@@ -88,8 +88,11 @@ export function HeaderSearch({ links }: HeaderSearchProps) {
                 <div className={classes.inner}>
                     <Group spacing={'xs'}>
                         <Burger opened={opened} onClick={toggle} size="sm" />
-                        <Image maw={40} mx="auto" m={4} radius="md" src={Logo} alt="Logo" />
-                        <Text size={32} title="Syngrisi Demo Company">Syngrisi Demo Site</Text>
+                        <Image maw={45} mx="auto" m={4} radius="lg" src={Logo} alt="Logo" />
+                        <Group spacing={'xs'} title="Syngrisi Demo Company">
+                            <Text size={32} fw={700} >Syngrisi</Text>
+                            <Text  size={32} fw={700} color="blue"> Demo Site</Text>
+                        </Group>
 
                     </Group>
 

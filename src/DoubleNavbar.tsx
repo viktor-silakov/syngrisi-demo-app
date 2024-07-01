@@ -10,7 +10,7 @@ import {
     IconSettings,
 } from '@tabler/icons-react';
 import { useNavigate } from 'react-router-dom';
-import Logo from './img/demoLogo.png';
+import Logo from './img/logoBlack.svg';
 
 const useStyles = createStyles((theme) => ({
     wrapper: {
